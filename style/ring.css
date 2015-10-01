@@ -1,0 +1,510 @@
+/*
+ * CONTAINER
+ */
+body {
+	background-color: #0F0F0F;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+#ringContainer {
+	position: relative;
+	opacity: 0;
+	width: 850px;
+	height: 700px;
+	margin: auto;
+	background-color: #0F0F0F;
+}
+#ringTitle {
+	position: absolute;
+	top: 0;
+	left: 5px;
+	width: 230px;
+	height: 92px;
+	background-image: url("./images/Ring_Title.png");
+	background-repeat: no-repeat;
+}
+#touchBlocker {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1000;
+}
+.ui-tooltip {
+	background-color: black;
+	font-family: sans-serif;
+	color: #A5A5A5;
+	font-size: 12px;
+	-webkit-box-shadow: 0 0 6px 2px rgba(120, 120, 120, .5);
+	-moz-box-shadow: 0 0 6px 2px rgba(120, 120, 120, .5);
+	box-shadow: 0 0 6px 2px rgba(120, 120, 120, .5);
+	line-height: 15px;
+	padding: 8px;
+	position: absolute;
+	z-index: 9999;
+	max-width: 300px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+/*
+ * SECTION TABS
+ */
+#sectionTab {
+	position: absolute;
+	top: 100px;
+	left: 0;
+}
+.sectionControls {
+	position: absolute;
+	padding: 0;
+	top: 0;
+	left: 0;
+	width: 240px;
+	height: 32px;
+}
+.sectionControls .tab {
+	cursor: pointer;
+	float: left;
+	width: 80px;
+	height: 32px;
+	margin: 0;
+}
+.sectionControls .tab .text {
+	position: absolute;
+	width: 80px;
+	height: 20px;
+	font-family: sans-serif;
+	font-size: 12px;
+	top: 10px;
+	text-align: center;
+}
+.sectionControls .tab.unchecked .text {
+	color: #A5A5A5;
+}
+.sectionControls .tab.checked .text {
+	color: #FF2E12;
+}
+.sectionControls .tab.unchecked {
+	background-image: url("./images/Tabs/Tab_Inactive.png");
+	background-size: 100%;
+}
+.sectionControls .tab.checked {
+	background-image: url("./images/stripe1.png");
+}
+/*
+ * MODULES
+ */
+#moduleContainer {
+	position: absolute;
+	height: 400px;
+	width: 240px;
+	left: 0px;
+	top: 132px;
+	background-image: url("./images/stripe1.png");
+}
+.module {
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+	width: 240px;
+	height: 140px;
+}
+.module .title {
+	font-family: sans-serif;
+	font-size: 12px;
+	color: #A5A5A5;
+	width: 100px;
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	text-align: left;
+}
+.module .title.solo {
+	color: #F1DB2D;
+}
+.module .ring {
+	cursor: pointer;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	left: 0px;
+	background-image: url("./images/Ring/Knob_Center.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 100;
+}
+.module .ring .ringHolder {
+	cursor: pointer;
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	top: 0px;
+	left: 10px;
+	z-index: 900;
+}
+.module .ringHandle {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100px;
+	height: 100px;
+	background-image: url("./images/Ring/Knob_Handle.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 99;
+}
+.module .ringNumber {
+	font-family: sans-serif;
+	position: absolute;
+	left: 0px;
+	color: #A5A5A5;
+	font-size: 12px;
+	height: 12px;
+	width: 100%;
+	top: 50%;
+	text-align: center;
+	margin-top: -7px;
+}
+.module .ringIndicator {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100px;
+	height: 100px;
+	z-index: 10;
+}
+.module .indexIndicator {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100px;
+	height: 100px;
+	z-index: 12;
+}
+.ringIndicator.n1 {
+	background-image: url("./images/Ring/Knob_OuterRing_01-00.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ringIndicator.n2 {
+	background-image: url("./images/Ring/Knob_OuterRing_02-00.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ringIndicator.n3 {
+	background-image: url("./images/Ring/Knob_OuterRing_03-00.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ringIndicator.n4 {
+	background-image: url("./images/Ring/Knob_OuterRing_04-00.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ringIndicator.n8 {
+	background-image: url("./images/Ring/Knob_OuterRing_08-00.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ringIndicator.n16 {
+	background-image: url("./images/Ring/Knob_OuterRing_16-00.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.module .timbre {
+	position: absolute;
+	top: 50%;
+	left: 89px;
+	width: 125px;
+	margin-top: -25px;
+	height: 50px;
+}
+.module .timbreNumber {
+	font-family: sans-serif;
+	position: absolute;
+	left: 100%;
+	color: #A5A5A5;
+	font-size: 12px;
+	height: 12px;
+	width: 12px;
+	top: 50%;
+	margin-top: -8px;
+}
+.module .sliderContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 112px;
+	height: 50px;
+	margin-top: -25px;
+	margin-left: -53px;
+}
+.module .sliderHandle {
+	cursor: pointer;
+	height: 50px;
+	width: 18px;
+	background-image: url("./images/Slider/Slider_Handle.png");
+	background-repeat: no-repeat;
+	z-index: 999;
+}
+.module .sliderLine {
+	background-image: url("./images/Slider/Slider_Line.png");
+	background-repeat: no-repeat;
+}
+/*
+ * IMAGES
+ */
+#imageContainer {
+	display: none;
+}
+#imageContainer img {
+	opacity: 0;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/*
+ * MASTER CONTROLS
+ */
+.masterControls {
+	position: absolute;
+	top: 550px;
+	left: 0;
+	width: 240px;
+	height: 90px;
+	background-color: #0F0F0F;
+	background-image: url("./images/stripe0.png");
+}
+.masterControls .playbutton {
+	background-image: url("./images/Play/Play_OFF.png");
+	background-size: 100%;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 50%;
+	margin-top: -25px;
+	left: 10px;
+	cursor: pointer;
+	z-index: 1001;
+}
+.masterControls .playbutton.playing {
+	background-image: url("./images/Play/Play_ON.png");
+}
+.masterControls .title {
+	font-family: sans-serif;
+	position: absolute;
+	color: #A5A5A5;
+	font-size: 12px;
+	top: 10px;
+	right: 10px;
+}
+.masterControls .tempo {
+	position: absolute;
+	top: 50%;
+	left: 75px;
+	width: 125px;
+	margin-top: -25px;
+	height: 50px;
+}
+.masterControls .tempoNumber {
+	font-family: sans-serif;
+	position: absolute;
+	left: 100%;
+	color: #A5A5A5;
+	font-size: 12px;
+	height: 12px;
+	width: 12px;
+	top: 50%;
+	margin-top: -8px;
+}
+.masterControls .tempoContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 112px;
+	height: 50px;
+	margin-top: -25px;
+	margin-left: -52px;
+}
+.masterControls .sliderHandle {
+	position: absolute;
+	cursor: pointer;
+	height: 50px;
+	width: 18px;
+	background-image: url("./images/Slider/Slider_Handle.png");
+	background-repeat: no-repeat;
+}
+.masterControls .sliderLine {
+	background-image: url("./images/Slider/Slider_Line.png");
+	background-repeat: no-repeat;
+}
+/*
+ * LOADING BAR
+ */
+#loadingbar {
+	position: absolute;
+	width: 400px;
+	top: 50%;
+	left: 50%;
+	height: 50px;
+	margin-top: -25px;
+	margin-left: -200px;
+	border: 1px solid #A5A5A5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.loadingBar {
+	z-index: -100;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	width: 390px;
+	height: 40px;
+}
+.loadingBar .loadedArea {
+	height: 100%;
+	width: 50%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-image: url("./images/stripe2.png");
+}
+/*
+ * SONG PROGRESS BAR
+ */
+
+#songProgress {
+	opacity: 0;
+	position: absolute;
+	width: 450px;
+	top: 510px;
+	left: 300px;
+	height: 16px;
+	border: 1px solid #A5A5A5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	overflow: hidden;
+	z-index: 100;
+}
+.progressBar {
+	position: absolute;
+	left: 4px;
+	top: 4px;
+	width: 442px;;
+	height: 8px;
+}
+.progressBar .progressArea {
+	height: 100%;
+	width: 50%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-image: url("./images/stripe2.png");
+}
+/*
+ * SHARING
+ */
+#shareURL .shareSong {
+	cursor: pointer;
+	position: absolute;
+	width: 128px;
+	height: 51px;
+	left: 260px;
+	top: 550px;
+	background-image: url("./images/ShareURL/Share_Song.png");
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+#shareURL .shareSong.showURLImage {
+	background-image: url("./images/ShareURL/Share_Song_Selected.png");
+}
+#shareURL .shareSong.showURLWidth {
+    width: 236px;
+}
+/*
+#shareURL .shareSong #title {
+	position: absolute;
+	font-family: sans-serif;
+	font-size: 12px;
+	color: #F1DB2D;
+	height: 14px;
+	top: 25px;
+	text-align: center;
+	margin-top: -7px;
+	width: 100%;
+}*/
+.shareSong .urlArea {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 50px;
+}
+.shareSong .urlText {
+	position: absolute;
+	font-family: sans-serif;
+	font-size: 10px;
+	color: #A5A5A5;
+	height: 14px;
+	width: 100%;
+	text-align: center;
+	bottom: 6px;
+}
+.shareSong input {
+	position: absolute;
+	font-family: sans-serif;
+	font-size: 10px;
+	color: #A5A5A5;
+	height: 20px;
+	width: 195px;
+	left: 22px;
+    top: 14px;
+	text-align: center;
+	border: 0;
+    z-index: -1;
+	background-color: transparent;
+}
+/*
+ * INFORMATION
+ */
+#information {
+	padding: 10px;
+	position: absolute;
+	font-family: sans-serif;
+	font-size: 11px;
+	color: #A5A5A5;
+	width: 280px;
+	right: 0px;
+	top: 540px;
+	border: 0px;
+	background-image: url("./images/stripe0.png");
+}
+/*
+ * VISUALIZER
+ */
+#visualizer {
+	position: absolute;
+	left: 300px;
+	top: 50px;
+	width: 450px;
+	height: 450px;
+}
+.ringCanvas {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 450px;
+	height: 450px;
+}

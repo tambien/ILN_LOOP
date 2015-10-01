@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--music and code YOTAM MANN 
+    design by ELLIOT BLANCHARD-->
+<head>
+    <title>LOOP</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <!--STYLE SHEETS-->
+    <link rel="stylesheet" href="style/ring.css" />
+    <!--DEPENDENCIES-->
+    <script type="text/javascript" charset="UTF-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/jquery.transit.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/webkitAudioContextMonkeyPatch.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/underscore.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/backbone.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/jquery-ui-1.9.2.custom.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/jquery.ui.touch-punch.min.js"></script>
+    <!--APPLICATION-->
+    <script type="text/javascript" charset="UTF-8" src="js/Ring.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/Util.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/Metronome.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/Module.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/Bass.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/Mid.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/High.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/Visualizer.js"></script>
+</head>
+<body>
+    <!--ALL THE IMAGES-->
+    <div id="imageContainer">
+        <img id="img1_1" src="./style/images/Ring/Knob_OuterRing_01-01.png" alt="ring">
+        <img id="img2_1" src="./style/images/Ring/Knob_OuterRing_02-01.png" alt="ring">
+        <img id="img2_2" src="./style/images/Ring/Knob_OuterRing_02-02.png" alt="ring">
+        <img id="img3_1" src="./style/images/Ring/Knob_OuterRing_03-01.png" alt="ring">
+        <img id="img3_2" src="./style/images/Ring/Knob_OuterRing_03-02.png" alt="ring">
+        <img id="img3_3" src="./style/images/Ring/Knob_OuterRing_03-03.png" alt="ring">
+        <img id="img4_1" src="./style/images/Ring/Knob_OuterRing_04-01.png" alt="ring">
+        <img id="img4_2" src="./style/images/Ring/Knob_OuterRing_04-02.png" alt="ring">
+        <img id="img4_3" src="./style/images/Ring/Knob_OuterRing_04-03.png" alt="ring">
+        <img id="img4_4" src="./style/images/Ring/Knob_OuterRing_04-04.png" alt="ring">
+        <img id="img8_1" src="./style/images/Ring/Knob_OuterRing_08-01.png" alt="ring">
+        <img id="img8_2" src="./style/images/Ring/Knob_OuterRing_08-02.png" alt="ring">
+        <img id="img8_3" src="./style/images/Ring/Knob_OuterRing_08-03.png" alt="ring">
+        <img id="img8_4" src="./style/images/Ring/Knob_OuterRing_08-04.png" alt="ring">
+        <img id="img8_5" src="./style/images/Ring/Knob_OuterRing_08-05.png" alt="ring">
+        <img id="img8_6" src="./style/images/Ring/Knob_OuterRing_08-06.png" alt="ring">
+        <img id="img8_7" src="./style/images/Ring/Knob_OuterRing_08-07.png" alt="ring">
+        <img id="img8_8" src="./style/images/Ring/Knob_OuterRing_08-08.png" alt="ring">
+        <img id="img16_1" src="./style/images/Ring/Knob_OuterRing_16-01.png" alt="ring">
+        <img id="img16_2" src="./style/images/Ring/Knob_OuterRing_16-02.png" alt="ring">
+        <img id="img16_3" src="./style/images/Ring/Knob_OuterRing_16-03.png" alt="ring">
+        <img id="img16_4" src="./style/images/Ring/Knob_OuterRing_16-04.png" alt="ring">
+        <img id="img16_5" src="./style/images/Ring/Knob_OuterRing_16-05.png" alt="ring">
+        <img id="img16_6" src="./style/images/Ring/Knob_OuterRing_16-06.png" alt="ring">
+        <img id="img16_7" src="./style/images/Ring/Knob_OuterRing_16-07.png" alt="ring">
+        <img id="img16_8" src="./style/images/Ring/Knob_OuterRing_16-08.png" alt="ring">
+        <img id="img16_9" src="./style/images/Ring/Knob_OuterRing_16-09.png" alt="ring">
+        <img id="img16_10" src="./style/images/Ring/Knob_OuterRing_16-10.png"
+        alt="ring">
+        <img id="img16_11" src="./style/images/Ring/Knob_OuterRing_16-11.png"
+        alt="ring">
+        <img id="img16_12" src="./style/images/Ring/Knob_OuterRing_16-12.png"
+        alt="ring">
+        <img id="img16_13" src="./style/images/Ring/Knob_OuterRing_16-13.png"
+        alt="ring">
+        <img id="img16_14" src="./style/images/Ring/Knob_OuterRing_16-14.png"
+        alt="ring">
+        <img id="img16_15" src="./style/images/Ring/Knob_OuterRing_16-15.png"
+        alt="ring">
+        <img id="img16_16" src="./style/images/Ring/Knob_OuterRing_16-16.png"
+        alt="ring">
+    </div>
+    <div id="loadingbar"></div>
+    <div id="ringContainer">
+        <div id="touchBlocker"></div>
+        <div id="ringTitle"></div>
+        <div id="sectionTab"></div>
+        <div id="moduleContainer"></div>
+        <div id="masterControls"></div>
+        <div id="songProgress"></div>
+        <div id='visualizer'></div>
+        <div id="shareURL"></div>
+        <div id="information">LOOP makes you a composer. Create a song in less than a minute!
+            <br>
+            <br>Set each of the three voices: high, mid, and bass - in each of the three
+            sections: start, middle, and end.
+            <br>
+            <br>Then hit the play button, and you're done. LOOP takes care of the rest.
+            <br>
+            <br>Share your song with others by clicking "Share Song" and copying the URL.</div>
+    </div>
+</body>
