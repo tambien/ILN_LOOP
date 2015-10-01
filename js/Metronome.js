@@ -123,7 +123,7 @@ RING.Metronome = Backbone.Model.extend({
 		//create an oscillator at a 64n resolution
 		this.clock = RING.context.createOscillator();
 		//square wave
-		this.clock.type = 1;
+		this.clock.type = "square";
 		//this.phase = 0;
 		this.tatum = 0;
 		//set bpm
